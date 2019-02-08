@@ -210,10 +210,11 @@ def big_shoe_rebounds
         end
         bigfoot_size = shoe_sizes.sort.last
 
-        if stats[:shoe] == bigfoot_size
-          bigfoot = player
+        data.each do |player, stats|
+          if stats[:shoe] == bigfoot_size
+            return stats[:rebounds]
+          end
         end
-        binding.pry
       end
     end
   end
