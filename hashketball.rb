@@ -209,6 +209,7 @@ def big_shoe_rebounds
         data.each do |player, stats|
           shoe_sizes << stats[:shoe]
         end
+        binding.pry
         shoe_sizes.sort
       end
     end
