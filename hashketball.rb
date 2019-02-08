@@ -209,7 +209,10 @@ def big_shoe_rebounds
           shoe_sizes << stats[:shoe]
         end
         binding.pry
-        bigfoot = shoe_sizes.sort.last
+        bigfoot_size = shoe_sizes.sort.last
+
+        if stats[:shoe] == bigfoot_size
+          bigfoot = player
       end
     end
   end
