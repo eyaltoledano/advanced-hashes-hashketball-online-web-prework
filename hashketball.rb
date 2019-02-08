@@ -201,7 +201,6 @@ end
 # Then, return that player's number of rebounds
 
 def big_shoe_rebounds
-  bigfoot = []
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -210,7 +209,7 @@ def big_shoe_rebounds
           shoe_sizes << stats[:shoe]
         end
         binding.pry
-        shoe_sizes.sort
+        bigfoot = shoe_sizes.sort.last
       end
     end
   end
